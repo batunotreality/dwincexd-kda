@@ -1,13 +1,12 @@
--- Oyuncunun KDA verilerini yükle
 RegisterNetEvent('loadKDA')
 AddEventHandler('loadKDA', function()
     local src = source
-    local identifier = GetPlayerIdentifiers(src)[1] -- Oyuncunun hex ID'sini al
+    local identifier = GetPlayerIdentifiers(src)[1]
 
-    -- Oyuncunun KDA verilerini kontrol et
+
     MySQL.query('SELECT kills, deaths, assists FROM player_kda WHERE identifier = ?', { identifier }, function(result)
         if result and result[1] then
-            -- Oyuncunun KDA verilerini yükle
+
             TriggerClientEvent('updateKDA', src, result[1].kills, result[1].deaths, result[1].assists)
         else
             -- Oyuncu ilk defa geliyorsa, yeni bir kayıt oluştur
@@ -18,7 +17,6 @@ AddEventHandler('loadKDA', function()
     end)
 end)
 
--- Oyuncunun KDA verilerini kaydet
 RegisterNetEvent('saveKDA')
 AddEventHandler('saveKDA', function(kills, deaths, assists)
     local src = source
@@ -31,7 +29,6 @@ AddEventHandler('saveKDA', function(kills, deaths, assists)
     end)
 end)
 
--- Oyuncuya KDA bilgilerini gönderme
 RegisterCommand('kda', function(source, args, rawCommand)
     local src = source
     local identifier = GetPlayerIdentifiers(src)[1]
@@ -51,7 +48,6 @@ RegisterCommand('kda', function(source, args, rawCommand)
     end)
 end)
 
--- Oyuncu sunucuya katıldığında KDA verilerini yükle
 AddEventHandler('playerJoining', function()
     local src = source
     TriggerEvent('loadKDA', src)

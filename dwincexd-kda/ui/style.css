@@ -3,30 +3,30 @@ body {
     padding: 0;
     overflow: hidden;
     font-family: 'Arial', sans-serif;
-    background: transparent; /* Arka planı tamamen transparan yap */
+    background: transparent;
 }
 
 #kda-container {
     position: absolute;
-    bottom: 20px; /* Pozisyonu ayarla */
-    right: 20px; /* Pozisyonu ayarla */
-    background-color: rgba(0, 0, 0, 0.7); /* Arka planı daha koyu ve transparan yap */
-    color: rgb(255, 255, 255); /* Yazı rengini beyaz yap */
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255); 
     padding: 15px 20px;
-    border-radius: 35px; /* Köşeleri yuvarlak yap */
+    border-radius: 35px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: auto;
     min-width: 150px;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Hafif bir çerçeve ekle */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Gölge efekti ekle */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efekti ekle */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #kda-container:hover {
-    transform: scale(1.05); /* Hover durumunda hafifçe büyüt */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Hover durumunda gölgeyi artır */
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
 #kills, #deaths, #kda {
@@ -38,18 +38,18 @@ body {
 }
 
 #kills {
-    color: #4CAF50; /* Yeşil renk */
+    color: #4CAF50;
 }
 
 #deaths {
-    color: #F44336; /* Kırmızı renk */
+    color: #F44336;
 }
 
 #kda {
-    color: #FFC107; /* Sarı renk */
+    color: #FFC107;
 }
 
 .icon {
     font-size: 16px;
-    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5)); /* İkonlara hafif gölge efekti ekle */
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
 }
