@@ -1,2 +1,4 @@
 # dwincexd-kda
-Kda Sistemi
+ÖZEL KDA SİSTEMİ
+ui desing sorunsuz çalışıyor 
+/kda açılıp kapanabiliyor
